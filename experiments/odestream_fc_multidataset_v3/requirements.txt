@@ -1,0 +1,19 @@
+# Linux x86_64, CPython 3.10.6. Same scientific releases as the Mac pilot.
+# CPU-only official PyTorch distribution; do not substitute the CUDA build.
+--extra-index-url https://download.pytorch.org/whl/cpu
+--only-binary=:all:
+torch==1.12.0+cpu
+numpy==1.23.5
+pandas==1.5.3
+scikit-learn==1.2.2
+# Required transitive dependencies, pinned from the inspected environment.
+scipy==1.10.1
+joblib==1.6.0
+cloudpickle==3.1.2
+threadpoolctl==3.7.0
+python-dateutil==2.9.0.post0
+pytz==2026.3.post1
+six==1.17.0
+typing_extensions==4.16.0
+# Optional in v3, included to preserve physical CPU-core provenance.
+psutil==5.9.8
